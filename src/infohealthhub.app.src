@@ -1,0 +1,12 @@
+{application, infohealthhub,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { infohealthhub_app, []}},
+  {env, []}
+ ]}.

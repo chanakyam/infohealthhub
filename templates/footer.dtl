@@ -1,0 +1,9 @@
+<footer>
+  <div class="container">
+  	<span class="right">
+		<a target="_blank" href="https://twitter.com/infohealthhub"><img src="/images/twitter.png"></a>
+		<a target="_blank" href="https://www.facebook.com/pages/Info-Health-Hub/589899867769683"><img src="/images/facebook.png"></a>		
+	</span>
+    <summary> <span class="left">Copyright &copy;  {%now "Y"%} Info Health Hub. All Rights Reserved. | <a href=/termsandconditions>Terms & Conditions</a></span> <!--<span class="right"><span class="left margin5">Follow Us on:</span> <a href="#"><img src="/images/twitter.png" /></a> <a href="#"><img src="/images/facebook.png" /></a> <a href="#"><img src="/images/google.png" /></a> <a href="#"><img src="/images/linkdedin.png" /></a> </span>--> </summary>
+  </div>
+</footer>

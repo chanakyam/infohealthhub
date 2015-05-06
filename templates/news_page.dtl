@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HealthNews</title>
+ <link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="/js/html5.js"></script>
+   <link href="/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery.min.js"></script>
+<!--<script src="/js/angular.min.js"></script>
+<script src="/js/controllers.js"></script>
+<script src="/js/ui-bootstrap-tpls-0.6.0.js"></script>-->
+<script>
+      function epochToDate(epochSecs) { 
+        var m_names = new Array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'); 
+        var d = new Date(new Date(0).setUTCSeconds(parseInt(epochSecs))); 
+        return (m_names[d.getMonth()]+ " " + d.getDate()+ " " + d.getFullYear()); 
+      }
+    </script>
+<style>
+.uploaded-date{
+  font-weight: normal;
+  font-size: 12px;
+  font-style: italic;
+}
+.module-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000a11;
+  font-weight: 800;
+  padding: 6px 10px;
+  background: #ddd;
+}
+.newsbody{
+  text-align: justify;
+line-height: 23px;
+}
+</style>
+</head>
+
+
+<body>
+{% include "header.dtl" %}
+<!--Navgation End-->
+<div class="container2">
+  <article>
+    <aside class="width67">          
+      <div class="clear"></div>
+      <div class="row">         
+        <div class="ExperModule" style="width: 96%;">
+          <div class="module">
+            <div class="newsbody">
+              <div class="module-title">{{ newsitem.title }}&nbsp;&nbsp;<span class="uploaded-date">-{{ newsitem.view_date }}</span></div>
+              
+             <!-- {% if newsitem.thumb_image %} -->
+            <img src="http://img1.contentapi.ws/{{ newsitem.thumb_image}}" style="width: 260px;float: left;margin: 5px 10px;" alt="">
+            <!-- {% else %} 
+            <img style="width: 260px;float: left;margin: 5px 10px;" src="/images/noimage.jpg"/>
+            {% endif %}-->
+             {{ newsitem.content }}
+
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      <div class="row">
+        <div class="ExperModule" style="width: 92%;margin-left: 30px;">
+         
+            {% if newsitem.linked_text_articles %}
+               <div class="module">
+              <div class="module-title">Related Articles</div>
+              <div class="module-inner">
+                {% for article in newsitem.linked_text_articles %}
+               <div class="post">
+                  <a ng-href="/n/{{ article.id }}"><h4 style="font-weight: normal;font-size: 17px;">{{ article.title }}</h4></a>
+                  {{ article.view_date }}</span>
+               </div>
+               {% endfor %}
+
+              </div>
+               </div>
+            {% endif %}
+         
+        </div>
+        <!--ExperModule End-->
+      </div>
+        <!--ExperModule End-->
+        
+        <div class="clear"></div>
+
+        <!-- <div class="row">
+                <div class="ExperModulead" >
+                  <div class="module">            
+                    <div class="module-inner">
+                        <div class="rightad2" style="margin:0 auto; width:300px;"><script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=300X250&cwpid=557677&cwwidth=300&cwheight=250&cwpnet=1&cwtagid=213296"></script></div>
+                    </div>
+                  </div>
+                </div>
+        </div> -->
+        
+      <div class="row">
+        <div class="ExperModule" style="width: 92%;margin-left: 30px;">
+          <div class="module">
+            <div class="module-title">More Fitness News</div>
+            <div class="module-inner">
+           
+              {% for news_item in topnews%}
+             <div class="post">
+              <!-- {% if news_item.thumb_image %} -->
+                <a href="/n/{{ news_item.id }}">
+                <!-- <img style="float: left;margin-right: 10px;height: 105px;width: 150px;" src="http://img1.contentapi.ws/{{ news_item.thumb_image}}"/> -->
+                <!-- {% else %}
+                <img style="float: left;margin-right: 10px;height: 105px;width: 150px;" src="/images/noimage.jpg"/> -->
+                </a>
+                <!-- {% endif %} -->
+                <a href="/n/{{ news_item.id }}"><h4>{{ news_item.title }}</h4></a>
+                <p class="postdescription">{{ news_item.description }}...<a href="/n/{{ news_item.id }}">Read more</a></p>
+                <span class="postby" style="float:right;">{{ news_item.upload_date }}</span>
+             </div>
+             {% endfor %}
+             <div style="float: right;margin-right: 3%;"><a href="/morefitnessnews?p=1">more news</a></div>
+            </div>
+            <span class="clearboth"></span>
+              <span class="clearboth"></span>
+              <!-- <div class="row" style="margin-left: 44px;">
+                <pagination on-select-page="pageChanged(page)" items-per-page="newsPerPage" total-items="bigTotalItems" page="bigCurrentPage" max-size="maxSize" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+              </div> -->
+          </div>
+
+        </div>
+        <!--ExperModule End-->
+      </div>
+        <!--ExperModule End-->
+      </div>
+     
+      <!--Trending Videos End--> 
+      
+    </aside>
+    {% include "sidebar1.dtl" %}
+  </article>
+  <!--Article End-->
+  
+  <div class="banner"><script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=728X90&cwpid=557677&cwwidth=728&cwheight=90&cwpnet=1&cwtagid=213297"></script></div>
+  <!--Bottom-add End--> 
+  
+</div>
+{% include "footer.dtl" %}
+<!--Footer End-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46294983-2', 'infohealthhub.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

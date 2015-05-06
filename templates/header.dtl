@@ -1,0 +1,17 @@
+<header>
+  <div class="container"><span class="logo"><a href="/"><img src="/images/InfoHealthHub_logo.png"  title="Info Health Hub"/></a>  
+  </span>
+  <div class="topad"><script src="http://tag.contextweb.com/TagPublish/getjs.aspx?action=VIEWAD&cwrun=200&cwadformat=728X90&cwpid=557677&cwwidth=728&cwheight=90&cwpnet=1&cwtagid=213297"></script></div>
+<!--    
+<div class="topmenu"><a href="#"><img src="/images/gplus.png" /></a> <a href="#"><img src="/images/fblike.png" /></a> <a href="#"><img src="/images/likecount.png" /></a> <a href="#" title="Sign Up" class="join">Join</a> <a href="#" title="Login" class="login">Login</a> </div>
+  </div>-->
+  <!-- container end --> 
+</header>
+<!--Header End-->
+<div class="navgation">
+  <div class="container2">
+    <nav> <a href="/" class="active"><span>Home</span></a><!-- <a href="#"><span>Alerts & Updates</span></a> <a href="#"><span>Natural Health</span></a> <a href="#"><span>Family Health</span></a> <a href="#"><span>Fitness & Exercise</span></a> <a href="#"><span>Diet & Weight Loss</span></a> <a href="#"><span>More</span></a> <a href="#"><span>Contact Us</span></a>--> </nav>
+  </div>
+  <!-- container2 end --> 
+</div>
+<!--Navgation End-->
