@@ -60,7 +60,7 @@ line-height: 23px;
               <div class="module-title">{{ newsitem.title }}&nbsp;&nbsp;<span class="uploaded-date">-<script> document.write(epochToDate({{ newsitem.uploaded_date }})) </script></span></div>
               
              <!-- {% if newsitem.thumb_image %} -->
-            <img src="http://img1.contentapi.ws/{{ newsitem.thumb_image |first}}" style="width: 260px;float: left;margin: 5px 10px;" alt="">
+            <img src="http://newscdn.lycos.com/{{ newsitem.thumb_image |first}}" style="width: 260px;float: left;margin: 5px 10px;" alt="">
             <!-- {% else %} 
             <img style="width: 260px;float: left;margin: 5px 10px;" src="/images/noimage.jpg"/>
             {% endif %}-->

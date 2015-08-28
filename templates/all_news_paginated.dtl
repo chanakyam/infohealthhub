@@ -34,7 +34,7 @@
              <div class="post">
               <!-- <a href="/n/{{ news_item.id }}">
               {% if news_item.thumb_image %}                
-                <img style="float: left;margin-right: 10px;height: 105px;width: 150px;" ng-src="http://img1.contentapi.ws/{{ news_item.thumb_image }}"/>
+                <img style="float: left;margin-right: 10px;height: 105px;width: 150px;" ng-src="http://newscdn.lycos.com/{{ news_item.thumb_image }}"/>
                 {% else %}
                 <img style="float: left;margin-right: 10px;height: 105px;width: 150px;" src="/images/noimage.jpg"/>
                 </a>
@@ -75,7 +75,7 @@
               {% for news_item in fnews%}
              <div class="post" style="height: 100px;">
              <a href="/n/{{ news_item.id }}">
-                <img src="http://img1.contentapi.ws/{{ news_item.thumb_image }}" style="width: 90px;height: 80px;float: left;margin-right: 7px;" />
+                <img src="http://newscdn.lycos.com/{{ news_item.thumb_image }}" style="width: 90px;height: 80px;float: left;margin-right: 7px;" />
              </a>
                 <a href="/n/{{ news_item.id }}"><h4>{{ news_item.title }}</h4></a>
               

@@ -165,7 +165,7 @@ year_value = current_date.getFullYear();
         <div class="blue-title">More From Entertainment</div>
  
 	<div class="pickdiv" ng-repeat="n in topNewsWithImages">
-          <div class="pickthumb"><a href="/slideshow"><img ng-src="http://img1.contentapi.ws/{% verbatim %}{{ n.value.thumbnail }}{% endverbatim %}"/></a></div>
+          <div class="pickthumb"><a href="/slideshow"><img ng-src="http://newscdn.lycos.com/{% verbatim %}{{ n.value.thumbnail }}{% endverbatim %}"/></a></div>
           <div class="picdec"><a href="/slideshow">{% verbatim %}{{ n.value.title }}{% endverbatim %}</a> -- {% verbatim %}{{ n.value.uploadedDate }}{% endverbatim %}</div>
         </div>
 

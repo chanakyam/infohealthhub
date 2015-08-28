@@ -190,7 +190,7 @@
           {% for img in params %}
 
           <div class="slide">
-            <img src="http://img1.contentapi.ws/{{ img.value.view_image }}" width="670" height="570" alt="Slide 1"></a>
+            <img src="http://newscdn.lycos.com/{{ img.value.view_image }}" width="670" height="570" alt="Slide 1"></a>
             <div class="caption" style="bottom:0">
               <p>{{ img.value.title }}</p>
             </div>

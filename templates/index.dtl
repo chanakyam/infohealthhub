@@ -89,7 +89,11 @@ $(this).html(txt);
               {% for news_item in news%}
              <div class="post" style="height: 100px;">
              <a href="/n/{{ news_item.id }}">
-                <img src="http://img1.contentapi.ws/{{ news_item.thumb_image }}" style="width: 90px;height: 80px;float: left;margin-right: 7px;" />
+              {% if news_item.thumb_image %}
+                <img src="http://newscdn.lycos.com/{{ news_item.thumb_image }}" style="width: 90px;height: 80px;float: left;margin-right: 7px;" />
+              {% else %}
+                <img src="/images/noimage.jpg" style="width: 90px;height: 80px;float: left;margin-right: 7px;"/>
+              {% endif %}
              </a>
                 <a href="/n/{{ news_item.id }}"><h4>{{ news_item.title }}</h4></a>
               
@@ -99,7 +103,7 @@ $(this).html(txt);
              {% endfor %}
 
             </div>
-            <span style="margin-left: 85%;"><a href="/morefitnessnews?p=1">more news</a></span>
+            <span style="margin-left: 85%;"><a href="/morehealthnews?p=1">more news</a></span>
           </div>
         </div>
         <!--ExperModule End-->
@@ -112,14 +116,14 @@ $(this).html(txt);
             <span class="postby">{{ top_news_item.upload_date }}</span> </div>
           <div class="VideoDiv">
             {% if top_news_item.thumb_image %}
-            <img src="http://img1.contentapi.ws/{{ top_news_item.thumb_image}}"  alt="">
+            <img src="http://newscdn.lycos.com/{{ top_news_item.view_image}}"  alt="">
             {% else %}
             <img src="/images/noimage.jpg"/>
             {% endif %}
           </div>
         </div></a>
         {% endfor %}
-        <div style="float: right;margin-right: 3%;"><a href="/morefitnessnews?p=1">more news</a></div>
+        <div style="float: right;margin-right: 3%;"><a href="/morehealthnews?p=1">more news</a></div>
       </div>
       <!--Trending Videos End-->
 

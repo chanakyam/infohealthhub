@@ -12,7 +12,7 @@
           <div style="margin-left: 0px;" class="row">
             <!--<span class="news-thumb">            
             <a href="/n/{{ n.id }}">
-            <img src="http://img1.contentapi.ws/{{ n.thumb_image }}"/>            
+            <img src="http://newscdn.lycos.com/{{ n.thumb_image }}"/>            
             </a>            
             </span>-->
             <span class="picdec"><a href="/n/{{ n.id }}">{{ n.title }}</a> -- {{ n.upload_date }}</span>

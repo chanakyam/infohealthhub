@@ -50,14 +50,14 @@ line-height: 23px;
         <div class="ExperModule" style="width: 96%;">
           <div class="module">
             <div class="newsbody">
-              <div class="module-title">{{ newsitem.title }}&nbsp;&nbsp;<span class="uploaded-date">-{{ newsitem.view_date }}</span></div>
+              <div class="module-title">{{ newsitem.title }}&nbsp;&nbsp;<span class="uploaded-date">-<script>document.write(epochToDate({{ newsitem.uploaded_date }})); </script></span></div>
               
              <!-- {% if newsitem.thumb_image %} -->
-            <img src="http://img1.contentapi.ws/{{ newsitem.thumb_image}}" style="width: 260px;float: left;margin: 5px 10px;" alt="">
+            <img src="http://newscdn.lycos.com/{{ newsitem.view_image}}" style="width: 260px;float: left;margin: 5px 10px;" alt="">
             <!-- {% else %} 
             <img style="width: 260px;float: left;margin: 5px 10px;" src="/images/noimage.jpg"/>
             {% endif %}-->
-             {{ newsitem.content }}
+             {{ newsitem.news_body }}
 
             </div>
           </div>
@@ -108,7 +108,7 @@ line-height: 23px;
              <div class="post">
               <!-- {% if news_item.thumb_image %} -->
                 <a href="/n/{{ news_item.id }}">
-                <!-- <img style="float: left;margin-right: 10px;height: 105px;width: 150px;" src="http://img1.contentapi.ws/{{ news_item.thumb_image}}"/> -->
+                <!-- <img style="float: left;margin-right: 10px;height: 105px;width: 150px;" src="http://newscdn.lycos.com/{{ news_item.thumb_image}}"/> -->
                 <!-- {% else %}
                 <img style="float: left;margin-right: 10px;height: 105px;width: 150px;" src="/images/noimage.jpg"/> -->
                 </a>
